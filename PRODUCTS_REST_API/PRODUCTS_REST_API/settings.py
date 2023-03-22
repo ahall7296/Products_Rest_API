@@ -83,15 +83,14 @@ WSGI_APPLICATION = 'PRODUCTS_REST_API.wsgi.application'
 #
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'Test',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
-            'charset': 'utf8mb4',
-            'sql_mode': 'traditional',
+            "autocommit": True
         },
     }
 }
